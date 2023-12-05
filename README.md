@@ -23,16 +23,9 @@ AIzaSyD111111111111111111111111LIcg-VsVJ3Rg11111111111111111111111sW8-cI76Zrsp1_
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- 먼저 jQuery를 포함합니다 -->
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-
-    <!-- Bootstrap CSS를 포함합니다 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Bootstrap JS를 jQuery 이후에 포함합니다 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- jQuery 이후에 다른 스크립트를 포함합니다 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <style>
@@ -103,7 +96,7 @@ AIzaSyD111111111111111111111111LIcg-VsVJ3Rg11111111111111111111111sW8-cI76Zrsp1_
             align-items: center;
             justify-content: center;
             margin-right: 50px;
-            margin-top: -60px;
+            margin-top: -15px;
         }
 
         .prices {
@@ -125,6 +118,7 @@ AIzaSyD111111111111111111111111LIcg-VsVJ3Rg11111111111111111111111sW8-cI76Zrsp1_
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
+            border-radius: 20px;
         }
 
         .price-item-title {
@@ -175,6 +169,10 @@ AIzaSyD111111111111111111111111LIcg-VsVJ3Rg11111111111111111111111sW8-cI76Zrsp1_
             text-align: center;
             border: none;
             resize: none;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         #textkaan {
@@ -183,11 +181,18 @@ AIzaSyD111111111111111111111111LIcg-VsVJ3Rg11111111111111111111111sW8-cI76Zrsp1_
             text-align: center;
             border: none;
             resize: none;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
         }
 
         #gimage {
             margin: 20px;
+            border-radius: 20px;
         }
+
 
         .upload-section {
             display: flex;
@@ -224,6 +229,7 @@ AIzaSyD111111111111111111111111LIcg-VsVJ3Rg11111111111111111111111sW8-cI76Zrsp1_
             margin: auto;
             display: none;
         }
+
     </style>
 </head>
 
@@ -268,10 +274,9 @@ AIzaSyD111111111111111111111111LIcg-VsVJ3Rg11111111111111111111111sW8-cI76Zrsp1_
             <!-- 추가 버튼 (예: 대답하기) -->
             <button class="btn btn-success" type="submit" onclick="Draw()" id="btnSend" style="display: none;">대답하기</button>
         </div>
-        <textarea name="textkan" id="textkan" cols="37" rows="2">↑선택한 이미지</textarea>
+        <textarea name="textkan" id="textkan" cols="37" rows="2" font size="60">↑선택한 이미지</textarea>
         <textarea name="textkaan" id="textkaan" cols="37" rows="2">↑비슷한 이미지</textarea>
     </div>
-
     <!-- 그림에 대해 말씀하세요 섹션 -->
     <div class="input-group mb-3">
         <input type="text" class="form-control" placeholder="그림에 대해 말씀하세요" id="imgMsg">
@@ -281,7 +286,7 @@ AIzaSyD111111111111111111111111LIcg-VsVJ3Rg11111111111111111111111sW8-cI76Zrsp1_
     <script src="chat.js"></script>
     <script>
         // 이미지 관련 코드 및 함수
-        var VISION_API_KEY = "111111111111111111111111111111111111111";
+        var VISION_API_KEY = "AIzaSyDLIcg-VsVJ3RgsW8-cI76Zrsp1_qkTBAA";
         var CV_URL = 'https://vision.googleapis.com/v1/images:annotate?key=' + VISION_API_KEY;
         var imagestring = "";
 
@@ -370,6 +375,7 @@ AIzaSyD111111111111111111111111LIcg-VsVJ3Rg11111111111111111111111sW8-cI76Zrsp1_
 </body>
 
 </html>
+
 
 
 
